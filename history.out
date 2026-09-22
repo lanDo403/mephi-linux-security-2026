@@ -32,13 +32,211 @@
    32  ls user1/
    33  ls -la user1/
    34  history -a
-   35  history -n
-   36  history
-   37  histort > history.out
-   38  history > history.out
-   39  sudo history > history.out
-   40  ls
-   41  cd ubuntu
-   42  ls
-   43  rm history.out 
-   44  history > history.out
+   35  touch gh_token.txt
+   36  nano gh_token.txt 
+   37  history
+   38  ls -la
+   39  cd ..
+   40  ls -la
+   41  cat .bash_history 
+   42  cat .bash_logout 
+   43  cat .bashrc 
+   44  history -n
+   45  history
+   46  histort > history.out
+   47  history > history.out
+   48  sudo history > history.out
+   49  ls
+   50  cd ubuntu
+   51  ls
+   52  rm history.out 
+   53  history > history.out
+   54  ls
+   55  cd Desktop/
+   56  ls
+   57  mkdir mephi-linux-security-2026
+   58  cd ..
+   59  mv history.out ~/Desktop/mephi-linux-security-2026/
+   60  cd Desktop/
+   61  ls
+   62  ps -eo pid,ruid,euid,ruser,euser,comm | awk '$3 == 0 && $2 >= 1000 && $2 < 65534' > ex2_1.txt
+   63  ps -eo pid,ruid,euid,ruser,euser,comm | awk '$3 == 0 && $2 >= 1000 && $2 < 65534'
+   64  sudo cp /etc/passwd ~/ex1_passwd.txt
+   65  sudo cp /etc/shadow ~/ex1_shadow.txt
+   66  sudo cp /etc/group ~/ex1_group.txt
+   67  cd ..
+   68  ls
+   69  mv ex1_group.txt ex1_passwd.txt ex1_shadow.txt ~/Desktop/
+   70  sudo nano /etc/sudoers
+   71  sudo nano /etc/sudoers.d/user1-time 
+   72  sudo cp /etc/sudoers.d/user1-time ~/Desktop/ex5_sudoers.txt
+   73  stat /home/user1 > ~/Desktop/stat.out
+   74  stat cat_suid >> ~/Desktop/stat.out
+   75  stat ~/Desktop/cat_suid >> ~/Desktop/stat.out
+   76  ls -l
+   77  cd Desktop/
+   78  ls -l
+   79  sudo chown ubuntu:ubuntu test.txt
+   80  cp /usr/bin/chown ./chown
+   81  sudo setcap cap_chown=ep ./chown
+   82  getcap ./chown
+   83  ./chown root:root test.txt
+   84  ls -l
+   85  stat ~/Desktop/chown >> ~/Desktop/stat.out
+   86  getcap ~/Desktop/chown > ~/Dekstop/getcap.out
+   87  getcap ~/Desktop/chown > ~/Desktop/getcap.out
+   88  cd mephi-linux-security-2026/
+   89  nano README.md
+   90  ls
+   91  git
+   92  sudo apt install git
+   93  git init
+   94  git add .
+   95  sudo git add .
+   96  git status
+   97  git commit -m "Add MEPHI homework 2026 files"
+   98  git status
+   99  git config --global user.name "Ubuntu"
+  100  git config --global user.email "forsmurfaccs@mail.ru"
+  101  git commit -m "Add MEPHI homework 2026 files"
+  102  git branch -M main
+  103  git remote add origin https://github.com/lanDo403/mephi-linux-security-2026.git
+  104  git push -u origin main
+  105  git config --global user.name "lanDo403"
+  106  git commit -m "Add MEPHI homework 2026 files"
+  107  git branch -M main
+  108  git push -u origin main
+  109  git remote add origin https://github.com/lanDo403/mephi-linux-security-2026.git
+  110  git branch -M main
+  111  git push -u origin main
+  112  git remote add origin https://github.com/lanDo403/mephi-linux-security-2026.git
+  113  git push -u origin main
+  114  git status
+  115  git config --global credential.helper store
+  116  ps -eo pid,ruid,euid,ruser,euser,comm | awk '$3 == 0 && $2 >= 1000 && $2 < 65534' > ex2_1.txt
+  117  ps -eo pid,ruid,euid,ruser,euser,comm | awk '$3 == 0 && $2 >= 1000 && $2 < 65534'
+  118  kill 8617
+  119  sudo useradd -u 1234 user1
+  120  groups
+  121  groups user1
+  122  sudo usermod -aG students user1
+  123  sudo groupadd students
+  124  sudo usermod -aG students user1
+  125  groups user1
+  126  sudo chage -m 0 -M 90 user1
+  127  sudo chage -l user1
+  128  find / -perm 4000
+  129  sudo find / -perm 4000
+  130  sudo find / -perm 4000 -fprintf ~/Desktop/ '%#m %u %p\n'
+  131  sudo find / -perm -4000 -fprintf ~/Desktop/ '%#m %u %p\n'
+  132  sudo find / -perm -4000 -fprintf ~/Desktop/suid.txt '%#m %u %p\n'
+  133  cat suid.txt 
+  134  ps --help
+  135  man ps
+  136  ps -eo pid,user,ruser,euser,comm,args
+  137  ps -eo pid,user,ruser,euser,comm,args | grep -E '^\s*[0-9]+\s+\S+\s+root\s|^\s*[0-9]+\s+(ubuntu|user1)\s'
+  138  ps -eo pid,user,ruser,euser,comm,args | grep -E '^\s*[0-9]+\s+[1-9][0-9]*\s+0\s'
+  139  ps -eo pid,user,ruser,euser,comm,args | awk '$3 == 0 && $2 >= 1000 && @2 < 65534'
+  140  ps -eo pid,user,ruser,euser,comm,args | awk '$3 == 0 && $2 >= 1000 && $2 < 65534'
+  141  passwd
+  142  history
+  143  ps -eo pid,user,ruser,euser,comm,args | awk '$3 == 0 && $2 >= 1000 && $2 < 65534'
+  144  ps -eo pid,user,ruser,euser,comm,args | awk '$3 == 0 && $2 >= 1000 && $2 < 65534' > ex2.txt
+  145  cat ex2.txt 
+  146  ps -eo pid,user,ruser,euser,comm,args | awk '$3 == 0 && $2 >= 1000 && $2 < 65534' > ex2.txt
+  147  passwd
+  148  cat /etc/passwd
+  149  cat /etc/group
+  150  cat /etc/sudoers
+  151  sudo cat /etc/sudoers
+  152  id user1 
+  153  ls -l /etc/sudoers
+  154  ls -l /etc/shadow
+  155  cat /etc/shadow
+  156  cp /etc/shadow ./cat_suid
+  157  sudo cp /etc/shadow ./cat_suid
+  158  sudo chown root:root cat_suid
+  159  sudo chown u+s cat_suid
+  160  sudo chmod u+s cat_suid
+  161  ls -l cat_suid 
+  162  cat_suid /etc/shadow
+  163  sudo cat_suid /etc/shadow
+  164  sudo ./cat_suid /etc/shadow
+  165  ./cat_suid /etc/shadow
+  166  sudo cat_suid /etc/shadow
+  167  sudo cat /etc/shadow
+  168  history
+  169  stat
+  170  stat --help
+  171  ls
+  172  ls -la
+  173  su
+  174  sudo cat_suid /etc/shadow
+  175  sudo ./cat_suid /etc/shadow
+  176  sudo chmod 4755 ./cat_suid 
+  177  sudo ./cat_suid /etc/shadow
+  178  ls -la
+  179  touch test.txt
+  180  sudo chown root:root test.txt 
+  181  sudo cp /usr/bin/chown ./chown_cap
+  182  ls -l ./chown_cap 
+  183  sudo setcap cap_chown+ep chown_cap
+  184  getcap chown_cap 
+  185  sudo setcap cap_chown+ep ./chown_cap
+  186  getcap chown_cap 
+  187  ./chown_cap r:root test.txt 
+  188  sudo ./chown_cap root:root test.txt 
+  189  ls -l
+  190  ./chown_cap ubuntu:ubuntu test.txt 
+  191  getfacl ./chown_cap
+  192  getcap ./chown_cap 
+  193  sudo setcap -r ./chown_cap 
+  194  ./chown_cap --version
+  195  sudo setcap cap_chown+ep ./chown_cap
+  196  ./chown_cap --version
+  197  findmnt -T ./chown_cap TARGET,FSTYPE,OPTIONS
+  198  findmnt -T ./chown_cap -o TARGET,FSTYPE,OPTIONS
+  199  sudo chmod +x ./chown_cap
+  200  ./chown_cap 
+  201  sudo ./chown_cap 
+  202  capsh --print | grep Bounding
+  203  rm -f ./chown_cap 
+  204  sudo cp /usr/bin/chown ./chown
+  205  sudo setcap cap_chown=ep ./chown
+  206  getcap ./chown 
+  207  rm test.txt 
+  208  rm -f test.txt 
+  209  touch test.txt
+  210  /usr/bin/chown root:root test.txt 
+  211  ./chown root:root test.txt
+  212  ls -l ./test.txt 
+  213  sudo setcap -r ./chown 
+  214  getcap ./chown 
+  215  getcap chown 
+  216  rm ./chown 
+  217  sudo nano /etc/sudoers
+  218  ls /etc/
+  219  ls /etc/sudoers.d/
+  220  sudo nano /etc/sudoers
+  221  sudo visudo -f /etc/sudoers.d/user1-time
+  222  sudo visudo -c
+  223  su - user1
+  224  sudo passwd user1
+  225  su - user1
+  226  ls
+  227  cd ..
+  228  ls
+  229  mkdir user1
+  230  sudo mkdir user1
+  231  ls
+  232  ls -l
+  233  sudo chown user1:user1 /home/user1
+  234  ls -l
+  235  su - user1
+  236  history
+  237  ps -eo pid,user,ruser,euser,comm,args | awk '$3 == 0 && $2 >= 1000 && $2 < 65534'
+  238  ls
+  239  cd mephi-linux-security-2026/
+  240  ls
+  241  ps -eo pid,user,ruser,euser,comm,args | awk '$3 == 0 && $2 >= 1000 && $2 < 65534' > ex2_1.txt 
+  242  history > history.out
