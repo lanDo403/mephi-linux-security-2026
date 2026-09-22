@@ -1,0 +1,44 @@
+    1  ls -l /usr/bin/passwd
+    2  su user1
+    3  history
+    4  passwd 
+    5  ps -eo pud,ruid,euid,ruser,euser,comm | awk '$3 == 0 && $2 >= 1000 && $2 < 65534'
+    6  ps -eo puid,ruid,euid,ruser,euser,comm | awk '$3 == 0 && $2 >= 1000 && $2 < 65534'
+    7  ps -eo pid,ruid,euid,ruser,euser,comm | awk '$3 == 0 && $2 >= 1000 && $2 < 65534'
+    8  grep -H '^Uid:' /proc/[0-9]*/status | grep -E 'Uid:\s+[1-9][0-9]*\s+0\s'
+    9  ps aux | grep '^root'
+   10  find / -perm -4000 -type f 2>/dev/null
+   11  getcap -r / 2>/dev/null
+   12  passwd
+   13  ps -eo pid,ruid,euid,ruser,euser,comm | awk '$3 == 0 && $2 >= 1000 && $2 < 65534'
+   14  ps -eo pid,ruid,euid,ruser,euser,comm | awk '$3 == 0 && $2 >= 1000 && $2 < 65534' > ex2.txt
+   15  cat ex2.txt 
+   16  history
+   17  history > history.out
+   18  ls
+   19  cat history.out 
+   20  echo $HISTSIZE
+   21  echo $HISTFILESIZE
+   22  echo $HISTFILE
+   23  cat ~/.bash_history 
+   24  shopt histappend
+   25  sudo cat /root/.bash_history
+   26  sudo cat /home/user1/.bash_history
+   27  sudo wc -l ~/.bash_history 
+   28  ls
+   29  ls -lh
+   30  cd ..
+   31  ls
+   32  ls user1/
+   33  ls -la user1/
+   34  history -a
+   35  history -n
+   36  history
+   37  histort > history.out
+   38  history > history.out
+   39  sudo history > history.out
+   40  ls
+   41  cd ubuntu
+   42  ls
+   43  rm history.out 
+   44  history > history.out

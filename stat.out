@@ -1,0 +1,24 @@
+  File: /home/user1
+  size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 8,2	Inode: 410562      Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1234/   user1)   Gid: ( 1234/   user1)
+Access: 2026-09-22 18:48:21.983181482 +0300
+Modify: 2026-09-22 18:47:12.540477557 +0300
+Change: 2026-09-22 18:48:09.318053103 +0300
+ Birth: 2026-09-22 18:47:12.540477557 +0300
+  File: /home/ubuntu/Desktop/cat_suid
+  size: 1336      	Blocks: 8          IO Block: 4096   regular file
+Device: 8,2	Inode: 410488      Links: 1
+Access: (4755/-rwsr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-09-22 18:14:12.455657592 +0300
+Modify: 2026-09-22 18:04:58.750605961 +0300
+Change: 2026-09-22 18:14:12.454657582 +0300
+ Birth: 2026-09-22 18:04:58.749098209 +0300
+  File: /home/ubuntu/Desktop/chown
+  size: 11352352  	Blocks: 22176      IO Block: 4096   regular file
+Device: 8,2	Inode: 410484      Links: 1
+Access: (0755/-rwxr-xr-x)  Uid: ( 1000/  ubuntu)   Gid: ( 1000/  ubuntu)
+Access: 2026-09-22 19:58:55.642425674 +0300
+Modify: 2026-09-22 19:58:27.756338884 +0300
+Change: 2026-09-22 19:58:39.551078903 +0300
+ Birth: 2026-09-22 19:58:27.753446860 +0300
